@@ -7,53 +7,53 @@
 
 @layer base {
   :root {
-    /* Core Colors - Professional E-Cell Palette */
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    /* Core Colors - Modern E-Cell Design */
+    --background: 220 26% 8%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card: 220 26% 10%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 220 26% 12%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Primary - Entrepreneurial Blue */
-    --primary: 221 83% 53%;
-    --primary-foreground: 0 0% 98%;
-    --primary-hover: 221 83% 45%;
-    --primary-glow: 221 83% 70%;
+    /* Primary - Vibrant Cyan */
+    --primary: 174 91% 68%;
+    --primary-foreground: 220 26% 8%;
+    --primary-hover: 174 91% 75%;
+    --primary-glow: 174 91% 85%;
 
-    /* Secondary - Innovation Purple */
-    --secondary: 262 83% 58%;
+    /* Secondary - Deep Teal */
+    --secondary: 174 47% 45%;
     --secondary-foreground: 0 0% 98%;
-    --secondary-hover: 262 83% 50%;
-    --secondary-glow: 262 83% 75%;
+    --secondary-hover: 174 47% 52%;
+    --secondary-glow: 174 47% 65%;
 
-    /* Accent - Success Green */
-    --accent: 142 76% 36%;
-    --accent-foreground: 0 0% 98%;
-    --accent-hover: 142 76% 28%;
+    /* Accent - Electric Orange */
+    --accent: 37 100% 58%;
+    --accent-foreground: 220 26% 8%;
+    --accent-hover: 37 100% 65%;
 
     /* Status Colors */
-    --success: 142 76% 36%;
-    --success-foreground: 0 0% 98%;
-    --warning: 38 92% 50%;
-    --warning-foreground: 0 0% 98%;
-    --destructive: 0 84% 60%;
+    --success: 142 76% 45%;
+    --success-foreground: 220 26% 8%;
+    --warning: 45 93% 58%;
+    --warning-foreground: 220 26% 8%;
+    --destructive: 0 91% 61%;
     --destructive-foreground: 0 0% 98%;
 
     /* Neutral Colors */
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 221 83% 53%;
+    --muted: 220 26% 15%;
+    --muted-foreground: 220 9% 65%;
+    --border: 220 26% 18%;
+    --input: 220 26% 18%;
+    --ring: 174 91% 68%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
-    --gradient-glow: radial-gradient(circle at center, hsl(var(--primary-glow) / 0.3) 0%, transparent 70%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(220 26% 8%) 0%, hsl(220 26% 12%) 50%, hsl(174 91% 68% / 0.1) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(220 26% 12%) 100%);
+    --gradient-glow: radial-gradient(circle at center, hsl(var(--primary) / 0.2) 0%, transparent 70%);
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(var(--primary) / 0.05);
@@ -91,48 +91,48 @@
   }
 
   .dark {
-    /* Dark Mode - Professional E-Cell */
-    --background: 222 47% 5%;
-    --foreground: 0 0% 98%;
+    /* Light Mode - Alternative E-Cell Theme */
+    --background: 0 0% 98%;
+    --foreground: 220 26% 15%;
 
-    --card: 222 47% 7%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 26% 15%;
 
-    --popover: 222 47% 7%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 26% 15%;
 
-    --primary: 221 83% 60%;
-    --primary-foreground: 222 47% 5%;
-    --primary-hover: 221 83% 55%;
-    --primary-glow: 221 83% 75%;
+    --primary: 174 91% 45%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 174 91% 38%;
+    --primary-glow: 174 91% 55%;
 
-    --secondary: 262 83% 65%;
-    --secondary-foreground: 222 47% 5%;
-    --secondary-hover: 262 83% 60%;
-    --secondary-glow: 262 83% 80%;
+    --secondary: 174 47% 35%;
+    --secondary-foreground: 0 0% 98%;
+    --secondary-hover: 174 47% 28%;
+    --secondary-glow: 174 47% 45%;
 
-    --accent: 142 76% 40%;
-    --accent-foreground: 222 47% 5%;
-    --accent-hover: 142 76% 35%;
+    --accent: 37 100% 50%;
+    --accent-foreground: 0 0% 98%;
+    --accent-hover: 37 100% 57%;
 
-    --success: 142 76% 40%;
-    --success-foreground: 222 47% 5%;
-    --warning: 38 92% 55%;
-    --warning-foreground: 222 47% 5%;
-    --destructive: 0 84% 65%;
-    --destructive-foreground: 222 47% 5%;
+    --success: 142 76% 45%;
+    --success-foreground: 0 0% 98%;
+    --warning: 45 93% 55%;
+    --warning-foreground: 0 0% 98%;
+    --destructive: 0 91% 58%;
+    --destructive-foreground: 0 0% 98%;
 
-    --muted: 222 47% 10%;
-    --muted-foreground: 215 16% 65%;
-    --border: 222 47% 15%;
-    --input: 222 47% 15%;
-    --ring: 221 83% 60%;
+    --muted: 220 13% 91%;
+    --muted-foreground: 220 9% 46%;
+    --border: 220 13% 86%;
+    --input: 220 13% 91%;
+    --ring: 174 91% 45%;
 
-    /* Dark Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
-    --gradient-glow: radial-gradient(circle at center, hsl(var(--primary-glow) / 0.2) 0%, transparent 70%);
+    /* Light Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 98%) 0%, hsl(220 13% 95%) 50%, hsl(174 91% 68% / 0.1) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(220 13% 95%) 100%);
+    --gradient-glow: radial-gradient(circle at center, hsl(var(--primary) / 0.15) 0%, transparent 70%);
 
     /* Dark Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.2);
@@ -171,7 +171,7 @@
 @layer components {
   /* Custom E-Cell Component Styles */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-pulse-glow;
   }
 
   .gradient-bg {
@@ -192,22 +192,16 @@
   }
 
   .glass-effect {
-    @apply backdrop-blur-md bg-white/10 dark:bg-black/10 border border-white/20 dark:border-white/10;
+    @apply backdrop-blur-xl bg-card/10 border border-primary/20;
   }
 
   .nav-link {
-    @apply relative px-3 py-2 text-sm font-medium transition-colors;
-    @apply hover:text-primary;
+    @apply relative font-medium transition-all duration-300;
   }
 
-  .nav-link::after {
-    @apply absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300;
-    content: '';
-  }
-
-  .nav-link:hover::after,
-  .nav-link.active::after {
-    @apply w-full;
+  .nav-link:hover {
+    @apply text-primary;
+    text-shadow: 0 0 8px hsl(var(--primary) / 0.3);
   }
 
   .section-padding {

@@ -5,6 +5,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useTheme } from '@/contexts/ThemeContext';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import ecellLogo from '@/assets/ecell-logo.png';
 import { 
   Bars3Icon, 
   XMarkIcon,
@@ -63,19 +64,24 @@ const Navigation = () => {
     <header className={cn(
       'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
       isScrolled 
-        ? 'bg-background/80 backdrop-blur-lg border-b shadow-sm' 
+        ? 'bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-lg' 
         : 'bg-transparent'
     )}>
       <div className="container-custom section-padding py-4">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">E</span>
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="relative">
+              <img 
+                src={ecellLogo} 
+                alt="E-Cell GHRCE MJ" 
+                className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
             <div className="hidden sm:block">
               <h1 className="font-heading font-bold text-xl gradient-text">E-Cell</h1>
-              <p className="text-xs text-muted-foreground">University</p>
+              <p className="text-xs text-muted-foreground">GHRCE MJ</p>
             </div>
           </Link>
 
@@ -86,8 +92,10 @@ const Navigation = () => {
                 key={item.name}
                 to={item.href}
                 className={cn(
-                  'nav-link',
-                  isActivePath(item.href) && 'active text-primary'
+                  'nav-link relative px-4 py-2 rounded-lg transition-all duration-300',
+                  isActivePath(item.href) 
+                    ? 'text-primary bg-primary/10 shadow-glow' 
+                    : 'hover:text-primary hover:bg-primary/5'
                 )}
               >
                 {item.name}
@@ -167,7 +175,7 @@ const Navigation = () => {
                 <Button variant="ghost" asChild>
                   <Link to="/login">Login</Link>
                 </Button>
-                <Button asChild>
+                <Button className="gradient-bg text-white hover:opacity-90" asChild>
                   <Link to="/signup">Join E-Cell</Link>
                 </Button>
               </div>
@@ -223,7 +231,7 @@ const Navigation = () => {
                         Login
                       </Link>
                     </Button>
-                    <Button className="w-full" asChild>
+                    <Button className="w-full gradient-bg text-white" asChild>
                       <Link to="/signup" onClick={() => setIsOpen(false)}>
                         Join E-Cell
                       </Link>
